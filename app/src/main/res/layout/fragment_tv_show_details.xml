@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ui.TvShowDetailsFragment"
+    android:background="@color/gray_600">
+
+    <TextView
+        android:id="@+id/tv_show_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"/>
+
+    <ImageView
+        android:id="@+id/tv_show_imgs"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/tv_show_title"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:src="@drawable/poster_placeholder2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tv_show_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_show_imgs"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tv_show_title"
+        android:textColorHint="@color/white" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tv_show_description_edit"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="start|top"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:textColor="@color/bluegray"
+            android:textColorHint="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_show_imgs"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_show_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:textColorHint="@color/white" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tv_show_status_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="Status"
+                    android:inputType="text"
+                    android:textColor="@color/bluegray"
+                    android:textColorHint="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_show_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:textColorHint="@color/white" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tv_show_start_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="Start"
+                    android:inputType="text"
+                    android:textColor="@color/bluegray"
+                    android:textColorHint="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_show_station"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:textColorHint="@color/white" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tv_show_station_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="Station"
+                    android:inputType="text"
+                    android:textColor="@color/bluegray"
+                    android:textColorHint="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_show_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:textColorHint="@color/white" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tv_show_rating_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:hint="Rating"
+                    android:inputType="text"
+                    android:textColor="@color/bluegray"
+                    android:textColorHint="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_show_genres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/white" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_show_genres_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="Genres"
+                android:inputType="text"
+                android:textColor="@color/bluegray"
+                android:textColorHint="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Episodes"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/episodes_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
